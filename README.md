@@ -10,6 +10,7 @@
 5. Commit Your Changes: Use `git commit -m "Your message"` to save your changes.
 6. Push Changes: Push your branch back to GitHub with `git push origin <branch-name>`.
 7. Create a Pull Request: Go to the original repository and submit a pull request to propose your changes.
+8. For further documentation makesure to check the documentation folder
 
 ### NB: comment properly on your work
 
