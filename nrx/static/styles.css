@@ -1,0 +1,304 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #007bff;
+
+}
+/* active nav setting */
+.nav-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for layout */
+}
+
+.nav-list li {
+  margin: 0 10px; /* Add some space between nav items */
+}
+
+.nav-list li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Default link color */
+  padding: 10px 5px; /* Add padding for better click area */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+}
+
+.nav-list li a:hover {
+  background-color: #007BFF; /* Background on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.nav-list li a.active {
+  color: #fff; /* Active link text color */
+  background-color: #007BFF; /* Active link background color */
+  border-radius: 5px; /* Optional: round corners */
+  font-weight: bold; /* Optional: bold the active link */
+}
+/* end code for active nav setting */
+
+/* Sticky Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007bff;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* header hoover applied at this section */
+/* Hover Effect on Header */
+header:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: #333;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.top-navbar i {
+  margin-right: 10px;
+}
+
+.top-navbar a {
+  color: rgba(255, 255, 255, 0.596);
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.top-navbar a:hover {
+  color: #10ddddd3;
+}
+
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #444;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+/* Ensure content doesn't overlap with the sticky header */
+body {
+  padding-top: 140px;
+}
+
+/* Logo styling */
+.logo-container img {
+  height: 50px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+/* header hoover applied at this section */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #4CAF50;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.navbar {
+    background-color:  #4CAF50;
+    padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* Change to your chosen font */
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar ul li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.navbar ul li a {
+    text-decoration:double;
+    padding: 10px 20px;
+    color: #000000 ; /* Dark text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Spacing around links */
+
+}
+.navbar ul li a:hover {
+    color: #b6d4ec; 
+}
+
+.navbar ul li a:hover, .btn-signin {
+    background-color: #1976D2;
+    border-radius: 5px;
+}
+
+/* Burger menu styles */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+.logo-container {
+  display: inline-block; /* Inline-block to respect padding and margin */
+  border-radius: 40%; /* Make the container circular */
+  overflow: hidden; /* Ensure the image doesn't overflow the circle */
+  transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+.logo {
+  width: 65px; /* Set the width of the logo */
+  height: 70px; /* Set the height of the logo */
+  display: block; /* Remove bottom gap */
+}
+
+.logo-container:hover {
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide nav links initially */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        position: absolute; /* Position menu absolutely */
+        top: 60px; /* Below the navbar */
+        left: 0;
+        background-color: #d1bdbd; /* Match navbar background */
+        z-index: 10; /* Ensure it appears on top */
+    }
+
+    .navbar ul.active {
+        display: flex; /* Show when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show burger icon */
+    }
+
+    .navbar ul li {
+        width: 100%; /* Make links take full width */
+        text-align: left; /* Align text to the left */
+    }
+
+    .navbar ul li a {
+        padding: 15px; /* Add padding for mobile */
+    }
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.top-navbar .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-navbar .social-icons a {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.top-navbar .social-icons a:hover {
+  color: #007bff;
+}
+
+
+.centered-div {
+  width: 50%; /* Set a default width */
+  max-width: 600px; /* Maximum width for larger screens */
+  /* background-color: #d1bdbd; */
+  padding: 20px; /* Optional padding */
+  text-align: center; /* Center text inside */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+
+
+.container > * {
+  position: relative; /* Position child elements above the overlay */
+  z-index: 2; /* Ensure they are above the overlay */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .centered-div {
+      width: 98%; /* Increase width for smaller screens */
+      padding: 10px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-div {
+      width: 90%; /* Further increase width for very small screens */
+      padding: 10px; /* Adjust padding */
+  }
+}
+
+

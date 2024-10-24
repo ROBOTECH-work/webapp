@@ -1,0 +1,62 @@
+/* Container styling */
+.login-container {
+    background-color: #1ed257; /* Light turquoise background */
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+    border: 2px solid #00a3ff; /* Slight blue border */
+}
+
+/* Title styling */
+.login-container h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Input field styling */
+.input-field {
+    display: block;
+    width: 90%;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 30px; /* Rounded edges */
+    border: none;
+    background-color: #e6e6e6; /* Light gray background */
+    font-size: 16px;
+    text-align: center;
+    color: #b0b0b0; /* Light gray placeholder */
+    box-sizing: border-box;
+}
+
+.input-field::placeholder {
+    color: #b0b0b0; /* Placeholder color */
+}
+
+/* On focus */
+.input-field:focus {
+    outline: none;
+    border: 2px solid #00a3ff;
+}
+
+/* Login button styling */
+.login-button {
+    width: 90%;
+    padding: 15px;
+    background-color: #00a3ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #008ae0;
+}
+

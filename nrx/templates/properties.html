@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Your Website</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   
+
+    <header>
+        
+      <div class="top-navbar">
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> +254 769 700 015
+                <i class="fas fa-envelope"></i> www.robotechdigital.com
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:robotechdigital.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="logo-container">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list" id="nav-list"> 
+                <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'products' %}" class="{% if request.path == '/products/' %}active{% endif %}">Products</a></li>
+                <li><a href="{% url 'services' %}" class="{% if request.path == '/services/' %}active{% endif %}">Services</a></li>
+                <li><a href="{% url 'properties' %}" class="{% if request.path == '/properties/' %}active{% endif %}">Properties for Sale</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a></li>
+                <li><a href="{% url 'signin' %}" class="{% if request.path == '/signin/' %}active{% endif %}">Sign In</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+   
+
+
+
+
+ <!-- to iclude contacts -->
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

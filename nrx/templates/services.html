@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Your Website</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   
+
+    <header>
+        
+      <div class="top-navbar">
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> +254 769 700 015
+                <i class="fas fa-envelope"></i> www.robotechdigital.com
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:robotechdigital.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="logo-container">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list" id="nav-list"> 
+                <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'products' %}" class="{% if request.path == '/products/' %}active{% endif %}">Products</a></li>
+                <li><a href="{% url 'services' %}" class="{% if request.path == '/services/' %}active{% endif %}">Services</a></li>
+                <li><a href="{% url 'properties' %}" class="{% if request.path == '/properties/' %}active{% endif %}">Properties for Sale</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a></li>
+                <li><a href="{% url 'signin' %}" class="{% if request.path == '/signin/' %}active{% endif %}">Sign In</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- to icludes services  -->
+
+
+ <section class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="{% static 'img/electric_fence.jpg' %}" alt="Electric Fence Installation">
+                <h3>Electric Fence Installation</h3>
+                <p>Secure your premises with our top-notch electric fencing solutions.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/cctv_installation.jpg' %}" alt="CCTV Installation">
+                <h3>CCTV Installation</h3>
+                <p>Enhance security with professional CCTV installations.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/iot.jpg' %}" alt="Internet of Things">
+                <h3>Internet of Things</h3>
+                <p>Integrate smart solutions into your life with IoT.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/ict_training.jpg' %}" alt="ICT Technical Training">
+                <h3>ICT Technical Training</h3>
+                <p>Get trained by experts in various ICT fields.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/networking.jpg' %}" alt="Networking">
+                <h3>Networking</h3>
+                <p>Reliable networking solutions for your business.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/robotics.jpg' %}" alt="Robotics">
+                <h3>Robotics</h3>
+                <p>Explore the world of robotics with our hands-on training.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/web_development.jpg' %}" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Custom web solutions tailored to your business needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/app_development.jpg' %}" alt="App Development">
+                <h3>App Development</h3>
+                <p>Innovative mobile apps to enhance your business reach.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/system_analysis.jpg' %}" alt="System Analysis">
+                <h3>System Analysis</h3>
+                <p>Comprehensive system analysis to optimize performance.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/ict_outsourcing.jpg' %}" alt="ICT Outsourcing">
+                <h3>ICT Outsourcing</h3>
+                <p>Focus on your business while we handle your ICT needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="{% static 'img/led_signs.jpg' %}" alt="LED Signs and Branding">
+                <h3>LED Signs and Branding</h3>
+                <p>Brighten your brand with our LED signage solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

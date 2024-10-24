@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Your Website</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4;">
+    <!-- Navigation Bar -->
+   
+
+    <header>
+        
+      <div class="top-navbar">
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> +254 769 700 015
+                <i class="fas fa-envelope"></i> www.robotechdigital.com
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:robotechdigital.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="logo-container">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <ul class="nav-list" id="nav-list"> 
+                    <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="{% url 'products' %}" class="{% if request.path == '/products/' %}active{% endif %}">Products</a></li>
+                    <li><a href="{% url 'services' %}" class="{% if request.path == '/services/' %}active{% endif %}">Services</a></li>
+                    <li><a href="{% url 'properties' %}" class="{% if request.path == '/properties/' %}active{% endif %}">Properties for Sale</a></li>
+                    <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a></li>
+                    <li><a href="{% url 'signin' %}" class="{% if request.path == '/signin/' %}active{% endif %}">Sign In</a></li>
+                </ul>
+                
+                
+        </nav>
+    </header>
+    
+ <!-- to iclude contacts -->
+
+
+ <section style="position: relative; height: 100vh; overflow: hidden;">
+   
+    <!-- Image 1 -->
+    <img src="{% static 'img/back.jpg' %}" alt="Image 1" 
+      style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; transform: translateX(-100%); transition: transform 1.5s ease;z-index: -3;">
+    
+    <!-- Image 2 -->
+    <img src="{% static 'img/city.jpg' %}" alt="Image 2" 
+      style="position: absolute; top: 0; right: 0; width: 100vw; height: 100vh; object-fit: cover; transform: translateX(100%); transition: transform 1.5s ease; z-index: -2;">
+      
+    </section>
+  
+  <script>
+    // JavaScript for hover movement effect
+    const images = document.querySelectorAll("section img");
+  
+    document.querySelector("section").addEventListener("mouseover", function() {
+      images[0].style.transform = "translateX(0)";  // Moves Image 1 into view
+      images[1].style.transform = "translateX(0)";  // Moves Image 2 into view
+    });
+  
+    document.querySelector("section").addEventListener("mouseout", function() {
+      images[0].style.transform = "translateX(-100%)";  // Moves Image 1 out of view
+      images[1].style.transform = "translateX(100%)";   // Moves Image 2 out of view
+    });
+  </script>
+  
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

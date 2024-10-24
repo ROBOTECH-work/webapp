@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.hero-content {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.hero h1 {
+    font-size: 4rem; /* Larger font size for the main heading */
+    margin: 0 0 20px; /* Remove margin above and add space below */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Slightly larger paragraph text */
+    margin: 0; /* Remove default margin */
+}
+
+
+
+
+.services {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    margin-top: 20px; /* Add margin to create space between hero and services */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 30px; /* Increased gap between cards */
+    padding: 0 10px; /* Padding around the cards */
+}
+
+.service-card {
+    background: rgba(0, 123, 255, 0.2); /* Light blue with opacity */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+    text-align: center;
+    padding: 20px; /* Padding inside the card */
+}
+
+.service-card img {
+    width: 80%; /* Reduced size of images */
+    height: auto;
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem; /* Adjusted heading size */
+}
+
+.service-card p {
+    padding: 0 10px 20px;
+    font-size: 1rem; /* Adjusted paragraph text size */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
