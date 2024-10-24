@@ -1,5 +1,5 @@
 # ROBOTECH
- - web app for robotech
+ - Web App for robotech
 
 ## To collaborate ,follow these steps:
 
