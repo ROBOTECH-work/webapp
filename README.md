@@ -1,7 +1,7 @@
-# webapp
- web app for robotech
+# ROBOTECH
+ - web app for robotech
 
-To collaborate ,follow these steps:
+## To collaborate ,follow these steps:
 
 1. Fork the Repository: Create a personal copy by clicking the "Fork" button on the repository page.
 2. Clone Your Fork: Use `git clone <your-fork-url>` to copy it to your local machine.
