@@ -1,0 +1,24 @@
+{
+  "name": "robotech",
+  "version": "1.0.0",
+  "description": "robotech webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ROBOTECH-work/webapp.git"
+  },
+  "keywords": [
+    "robotech",
+    "software",
+    "robotics"
+  ],
+  "author": "robotech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ROBOTECH-work/webapp/issues"
+  },
+  "homepage": "https://github.com/ROBOTECH-work/webapp#readme"
+}
